@@ -185,6 +185,10 @@ h1 {
   color: white;
 }
 
+.hide {
+  display: none;
+}
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;
