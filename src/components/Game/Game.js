@@ -25,10 +25,14 @@ function Game() {
     if (guesses.includes(answer)) {
       setWin(true);
       setEnd(true)
-    }
-    if(guesses.length === 6 && !win) {
-      setLose(true)
-      setEnd(true)
+    } else {
+        setWin((currentWin) => {
+          if (!currentWin && guesses.length === 6) {
+            setLose(true);
+            setEnd(true);
+          }
+          return currentWin;
+        });
     }
   }, [guesses]);
 
